@@ -27,6 +27,24 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("homepage"),
         ),
-        body: const Text("hellow flutter"));
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          color: Colors.blue.shade50,
+          child: Center(
+            child: Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                  color: Colors.blueGrey,
+                  border: Border.all(width: 2, color: Colors.black),
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 51, color: Colors.grey, spreadRadius: 21)
+                  ],
+                  shape: BoxShape.circle),
+            ),
+          ),
+        ));
   }
 }
