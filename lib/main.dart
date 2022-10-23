@@ -27,15 +27,17 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("homepage"),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Center(child: Image.asset('assets/images/new.jpg', scale:10,)),
-              Center(child: Image.asset('assets/images/logo.png')),
-              Center(child: Image.asset('assets/images/new.jpg', scale: 10,)),
-              Center(child: Image.asset('assets/images/logo.png')),            ],
+        body: Center(
+          
+            child: CircleAvatar(
+              backgroundImage:AssetImage('assets/images/new.jpg'),
+              backgroundColor: Colors.lightGreen,
+              maxRadius: 100, //minRadius : 50,
+              child: Text("name : sunflower",style: TextStyle(color: Colors.redAccent,fontSize: 30,),
+              )
           ),
         )
         );
   }
 }
+
