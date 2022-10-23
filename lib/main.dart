@@ -29,13 +29,17 @@ class MyHomePage extends StatelessWidget {
         ),
         body: Center(
           
-            child: CircleAvatar(
-              backgroundImage:AssetImage('assets/images/new.jpg'),
-              backgroundColor: Colors.lightGreen,
-              maxRadius: 100, //minRadius : 50,
-              child: Text("name : sunflower",style: TextStyle(color: Colors.redAccent,fontSize: 30,),
-              )
-          ),
+            child: Card(
+              shadowColor: Colors.green,
+              elevation: 5,
+              child: CircleAvatar(
+                backgroundImage:AssetImage('assets/images/new.jpg'),
+                backgroundColor: Colors.lightGreen,
+                maxRadius: 100, //minRadius : 50,
+                child: Text("name : sunflower",style: TextStyle(color: Colors.redAccent,fontSize: 30,),
+                )
+                      ),
+            ),
         )
         );
   }
