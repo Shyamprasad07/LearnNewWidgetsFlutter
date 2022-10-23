@@ -27,15 +27,15 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("homepage"),
         ),
-        body: Container(
-            color: Colors.blueGrey,
-            margin: EdgeInsets.all(11),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 31, left: 12),
-              child: Text(
-                "hello world",
-                style: TextStyle(fontSize: 25),
-              ),
-            )));
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Center(child: Image.asset('assets/images/new.jpg', scale:10,)),
+              Center(child: Image.asset('assets/images/logo.png')),
+              Center(child: Image.asset('assets/images/new.jpg', scale: 10,)),
+              Center(child: Image.asset('assets/images/logo.png')),            ],
+          ),
+        )
+        );
   }
 }
