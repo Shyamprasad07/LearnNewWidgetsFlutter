@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/intoPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,12 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.cyan,
-        textTheme: TextTheme(
-          headline1: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-          subtitle1: TextStyle(fontSize: 21, fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),
-        )
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        ),
+      home: IntroPage(),
     );
   }
 }
@@ -32,39 +29,13 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("homepage"),
         ),
-        body: Center(child: Container(
-          width: 300,
-          child: Column(
-            mainAxisAlignment:MainAxisAlignment.center ,
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(21),
-                    borderSide: BorderSide(color: Colors.deepOrange,width: 15)
-                 
-                  ),
-                  
-                  
-                  
-                ),
-
-              ),
-              Container(height: 11,),
-              TextField(
-                decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(21),
-                    borderSide: BorderSide(color: Colors.deepOrange)
-                  ),
-                  
-                ),
-              ),
-            ],
-          )))
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          color: Colors.yellow,
+          child: Text("hellow world"))
                
-        );
+        ); 
   }
 }
 
