@@ -10,8 +10,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
+        textTheme: TextTheme(
+          headline1: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+          subtitle1: TextStyle(fontSize: 21, fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),
+        )
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -27,20 +32,16 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("homepage"),
         ),
-        body: Center(
-          
-            child: Card(
-              shadowColor: Colors.green,
-              elevation: 5,
-              child: CircleAvatar(
-                backgroundImage:AssetImage('assets/images/new.jpg'),
-                backgroundColor: Colors.lightGreen,
-                maxRadius: 100, //minRadius : 50,
-                child: Text("name : sunflower",style: TextStyle(color: Colors.redAccent,fontSize: 30,),
-                )
-                      ),
-            ),
-        )
+        body: Column(
+          children: [
+            Text("hellow world",style:Theme.of(context).textTheme.headline1!.copyWith(color: Colors.orange),),
+            Text("hellow world",style:Theme.of(context).textTheme.subtitle1,),
+            Text("hellow world",style:Theme.of(context).textTheme.headline1!.copyWith(color: Colors.pink)),
+            Text("hellow world",style:Theme.of(context).textTheme.subtitle2!.copyWith(color: Colors.green),),
+
+          ],
+        ),
+              
         );
   }
 }
