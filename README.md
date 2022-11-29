@@ -1,4 +1,4 @@
-# ecommerce_app
+# Learning all Widgets of flutter
 
 A new Flutter project.
 
